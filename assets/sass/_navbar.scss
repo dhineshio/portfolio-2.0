@@ -1,0 +1,104 @@
+@import "./variables";
+@import "./mixins";
+@import "./animations";
+
+.nav-box {
+  background-color: $bg-color;
+  position: relative;
+  display: block;
+}
+.navbar {
+  @include glass-bg;
+  position: absolute;
+  position: sticky;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-toggler {
+  outline: none;
+  i {
+    color: $white;
+  }
+  &:focus {
+    border: none;
+    outline: none; /* Disable outline */
+    box-shadow: none;
+  }
+}
+.nav-link {
+  font-weight: 400;
+  color: $white;
+}
+.navbar .nav-link.active,
+.navbar .nav-link.active:focus {
+  color: $white; /* Change the color to your desired color */
+}
+// ! XS DEVICES - DESIGN
+@include media-breakpoint-up(xs) {
+  .nav-box {
+    padding: 20px 10px;
+  }
+  .navbar-collapse .show {
+    .show {
+      margin: 10px;
+    }
+  }
+  .navbar-toggler .bars {
+    display: none;
+  }
+  .navbar-toggler .cross {
+    display: block;
+  }
+  .navbar-toggler.collapsed .cross {
+    display: none;
+  }
+  .navbar-toggler.collapsed .bars {
+    display: block;
+  }
+  .nav-link {
+    animation: nav-left-right 0.5s;
+    &:hover {
+      transition: all 0.5s;
+      color: $primary-color;
+    }
+  }
+}
+// ! md DEVICES - DESIGN
+@include media-breakpoint-up(lg) {
+  .navbar {
+    margin: auto;
+  }
+  .nav-link {
+    margin-right: 30px;
+    position: relative;
+    display: inline-block;
+    // padding-bottom: 20px;
+    transition: transform 0.3s;
+
+    &:focus,
+    &:active {
+      color: $primary-color;
+    }
+
+    &:hover::after {
+      color: $white-color;
+      animation: nav-underline 0.3s forwards;
+      box-shadow: 0px 0px 20px $primary-color;
+    }
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      bottom: -40%;
+      background: $primary-color;
+      border-radius: 20px;
+    }
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+}

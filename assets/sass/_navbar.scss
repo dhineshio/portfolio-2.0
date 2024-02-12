@@ -4,15 +4,22 @@
 
 .nav-box {
   background-color: $bg-color;
-  position: relative;
-  display: block;
-}
-.navbar {
-  @include glass-bg;
-  position: absolute;
   position: sticky;
   top: 0;
+  display: block;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  margin: auto;
+  display: inline-block;
+  @include glass-bg;
+  position: sticky;
+  top: 100%;
   transition: all 0.5s;
+  z-index: 1;
 }
 .navbar-collapse {
   flex-grow: 0;

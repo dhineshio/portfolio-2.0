@@ -23,7 +23,8 @@ a {
   .header {
     background: $bg-color;
     color: $white-color;
-    // min-height: 100vh;
+    min-height: 100vh;
+    margin: auto;
     .header-box {
       margin: auto;
       .header-box-1 {
@@ -121,6 +122,12 @@ a {
         }
       }
     }
+  }
+  .about-section {
+    overflow: hidden;
+    height: 100vh;
+    background: $bg-color;
+    position: relative;
   }
 }
 // ! SM DEVICES - DESIGN

@@ -11860,7 +11860,7 @@ textarea.form-control-lg {
 .bg-container {
   width: 100%;
   height: 100vh;
-  position: fixed;
+  position: absolute;
   transform: skewY(-5deg);
   overflow: hidden;
 }
@@ -11914,6 +11914,59 @@ textarea.form-control-lg {
   font-weight: 800;
 }
 
+.bg-about-section {
+  z-index: 2;
+}
+
+/*=============================================
+=            WAVE ANIMATION            =
+=============================================*/
+.about-section {
+  position: relative;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(1);
+  }
+}
+.wave {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1000% 1000% 0 0;
+  position: absolute;
+  width: 200%;
+  height: 10em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+/*=====  End of WAVE ANIMATION  ======*/
 /* GLASS BACKGROUND */
 @keyframes nav-underline {
   0% {
@@ -11963,20 +12016,26 @@ textarea.form-control-lg {
 /*=====  End of JAVA DEVELOPER ANIMATION  ======*/
 .nav-box {
   background-color: #1e2134;
-  position: relative;
+  position: sticky;
+  top: 0;
   display: block;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar {
+  margin: auto;
+  display: inline-block;
   background: rgba(255, 255, 255, 0.26);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  position: absolute;
   position: sticky;
-  top: 0;
+  top: 100%;
   transition: all 0.5s;
+  z-index: 1;
 }
 
 .navbar-collapse {
@@ -12154,6 +12213,8 @@ a {
 .header {
   background: #1e2134;
   color: #fff;
+  min-height: 100vh;
+  margin: auto;
 }
 .header .header-box {
   margin: auto;
@@ -12239,6 +12300,13 @@ a {
   width: 70px;
   top: 49px;
   left: 133px;
+}
+
+.about-section {
+  overflow: hidden;
+  height: 100vh;
+  background: #1e2134;
+  position: relative;
 }
 
 @media (min-width: 768px) {

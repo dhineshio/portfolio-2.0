@@ -11975,6 +11975,8 @@ textarea.form-control-lg {
   -webkit-backdrop-filter: blur(5px);
   position: absolute;
   position: sticky;
+  top: 0;
+  transition: all 0.5s;
 }
 
 .navbar-collapse {
@@ -12012,11 +12014,11 @@ textarea.form-control-lg {
 }
 
 .navbar-toggler .bars {
-  display: none;
+  display: block;
 }
 
 .navbar-toggler .cross {
-  display: block;
+  display: none;
 }
 
 .navbar-toggler.collapsed .cross {
@@ -12139,7 +12141,6 @@ textarea.form-control-lg {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  overflow: hidden;
 }
 
 p {
@@ -12153,7 +12154,6 @@ a {
 .header {
   background: #1e2134;
   color: #fff;
-  min-height: 100vh;
 }
 .header .header-box {
   margin: auto;
@@ -12190,6 +12190,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 27.2px;
 }
 .header .header-box .header-box-1 .box-3 .link-box .icon-link {
   font-size: 32px;
@@ -12241,6 +12242,9 @@ a {
 }
 
 @media (min-width: 768px) {
+  .header {
+    height: 85vh;
+  }
   .header .header-box .header-box-1 {
     order: 0;
   }
@@ -12267,6 +12271,10 @@ a {
   }
 }
 @media (min-width: 992px) {
+  .header .header-box {
+    display: flex;
+    align-items: center;
+  }
   .header .header-box .header-box-1 .box-1 .text {
     font-size: 27.2px;
   }

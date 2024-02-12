@@ -11,6 +11,8 @@
   @include glass-bg;
   position: absolute;
   position: sticky;
+  top: 0;
+  transition: all 0.5s;
 }
 .navbar-collapse {
   flex-grow: 0;
@@ -45,10 +47,10 @@
     }
   }
   .navbar-toggler .bars {
-    display: none;
+    display: block;
   }
   .navbar-toggler .cross {
-    display: block;
+    display: none;
   }
   .navbar-toggler.collapsed .cross {
     display: none;

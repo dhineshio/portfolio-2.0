@@ -10,7 +10,6 @@
 body {
   font-family: $primary-font;
   font-size: $base-font-size;
-  overflow: hidden;
 }
 p {
   margin: 0;
@@ -24,7 +23,7 @@ a {
   .header {
     background: $bg-color;
     color: $white-color;
-    min-height: 100vh;
+    // min-height: 100vh;
     .header-box {
       margin: auto;
       .header-box-1 {
@@ -61,7 +60,7 @@ a {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          // align-items: center;
+          margin-bottom: $base-font-size * 1.7;
           .link-box {
             .icon-link {
               font-size: $base-font-size * 2;
@@ -130,6 +129,7 @@ a {
 // ! MD DEVICES - DESIGN
 @include media-breakpoint-up(md) {
   .header {
+    height: 85vh;
     .header-box {
       .header-box-1 {
         order: 0;
@@ -168,6 +168,8 @@ a {
 @include media-breakpoint-up(lg) {
   .header {
     .header-box {
+      display: flex;
+      align-items: center;
       .header-box-1 {
         .box-1 {
           .text {

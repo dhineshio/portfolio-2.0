@@ -12159,6 +12159,7 @@ a {
   margin: auto;
 }
 .header .header-box .header-box-1 {
+  order: 1;
   padding-top: 16px;
   z-index: 1;
 }
@@ -12199,8 +12200,50 @@ a {
 .header .header-box .header-box-1 .box-3 .link-box .icon-link:hover {
   color: #5fba75;
 }
+.header .header-box .header-box-2 {
+  order: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.header .header-box .header-box-2 .img-box {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.header .header-box .header-box-2 .img-box img {
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 5px;
+  transform: rotate(-20deg);
+  position: absolute;
+  width: 100px;
+  transition: all 0.5s;
+  border: 2px solid #5fba75;
+}
+.header .header-box .header-box-2 .img-box .img-1 {
+  width: 90px;
+  top: 114px;
+  left: 167px;
+}
+.header .header-box .header-box-2 .img-box .img-2 {
+  top: 108px;
+  left: 56px;
+}
+.header .header-box .header-box-2 .img-box .img-3 {
+  width: 70px;
+  top: 49px;
+  left: 133px;
+}
 
 @media (min-width: 768px) {
+  .header .header-box .header-box-1 {
+    order: 0;
+  }
   .header .header-box .header-box-1 .box-1 .text {
     font-size: 19.2px;
   }
@@ -12217,6 +12260,10 @@ a {
   .header .header-box .header-box-1 .box-2 .text {
     font-size: 17.6px;
     text-align: left;
+  }
+  .header .header-box .header-box-2 {
+    order: 1;
+    align-items: center;
   }
 }
 @media (min-width: 992px) {
@@ -12240,6 +12287,25 @@ a {
   .header .header-box .header-box-1 .box-3 .link-box .icon-link {
     font-size: 32px;
     padding: 16px 0;
+  }
+  .header .header-box .header-box-2 .img-box {
+    width: 400px;
+    height: 400px;
+  }
+  .header .header-box .header-box-2 .img-box .img-1 {
+    width: 150px;
+    top: 151px;
+    left: 217px;
+  }
+  .header .header-box .header-box-2 .img-box .img-2 {
+    width: 135px;
+    top: 135px;
+    left: 56px;
+  }
+  .header .header-box .header-box-2 .img-box .img-3 {
+    width: 105px;
+    top: 56px;
+    left: 164px;
   }
 }
 

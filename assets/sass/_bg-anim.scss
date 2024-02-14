@@ -5,6 +5,7 @@
   position: absolute;
   transform: skewY(-5deg);
   overflow: hidden;
+  z-index: 1;
   .bg-text-container {
     width: 100%;
     transform: translateY(-50%);

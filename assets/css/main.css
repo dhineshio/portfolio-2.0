@@ -12300,7 +12300,7 @@ a {
   color: #fff;
   min-height: 100vh;
   margin: auto;
-  border-bottom: 1px solid #fff;
+  position: relative;
 }
 .header .header-box {
   margin: auto;
@@ -12393,6 +12393,38 @@ a {
   height: 100vh;
   background: #1e2134;
   position: relative;
+  display: flex;
+}
+.about-section .about-grp {
+  z-index: 5;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+.about-section .about-grp .about-box {
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+.about-section .about-grp .about-box .side-box {
+  letter-spacing: 5px;
+  padding: 10px;
+  font-size: 24px;
+  background: #5fba75;
+  color: #1e2134;
+  font-weight: 500;
+  text-align: center;
+}
+.about-section .about-grp .about-box .main-box {
+  color: #fff;
+  padding: 10px;
 }
 
 @media (min-width: 768px) {

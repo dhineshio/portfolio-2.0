@@ -172,7 +172,27 @@
               <span>T</span>
             </div>
           </div>
-          <div>hello</div>
+          <div class="about-grp">
+            <div class="about-box about-box-1">
+              <div class="side-box">Summary</div>
+              <div class="main-box">
+                <h2>Hello, I'm <span>Dhinesh!</span></h2>
+                <p>
+                  I am a passionate Java developer dedicated to crafting robust,
+                  scalable, and maintainable software solutions. With a keen eye
+                  for detail and a strong foundation in software engineering
+                  principles, I strive to deliver high-quality code that exceeds
+                  expectations.
+                </p>
+              </div>
+            </div>
+            <div class="about-box about-box-1">
+              <div class="side-box">Journey</div>
+            </div>
+            <div class="about-box about-box-1">
+              <div class="side-box">Expertise</div>
+            </div>
+          </div>
           <div>
             <span class="wave"></span>
             <span class="wave"></span>
@@ -183,29 +203,6 @@
           ScrollReveal().reveal(".content", {
             interval: 16,
             reset: true,
-          });
-        </script>
-        <script>
-          // SCROLL TITLE ANIMATION TRIGGER
-          window.addEventListener("scroll", function () {
-            var scrollPosition = window.scrollY;
-            var firstPageHeight =
-              document.querySelector(".header").offsetHeight;
-            var secondPageThreshold = firstPageHeight;
-            // Check if the scroll position is beyond the threshold for the second page
-            if (scrollPosition >= secondPageThreshold) {
-              const spans = document.querySelectorAll(".title span");
-              spans.forEach((span, idx) => {
-                if (!span.classList.contains("active")) {
-                  // Initial animation
-                  setTimeout(() => {
-                    span.classList.add("active");
-                  }, 750 * (idx + 1));
-                }
-              });
-              // Remove the scroll event listener once the animation starts
-              window.removeEventListener("scroll", arguments.callee);
-            }
           });
         </script>
         <script src="./assets/js/script.js"></script>

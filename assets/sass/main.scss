@@ -25,7 +25,8 @@ a {
     color: $white-color;
     min-height: 100vh;
     margin: auto;
-    border-bottom: 1px solid $white-color;
+    // border-bottom: 1px solid $white-color;
+    position: relative;
     .header-box {
       margin: auto;
       .header-box-1 {
@@ -129,6 +130,35 @@ a {
     height: 100vh;
     background: $bg-color;
     position: relative;
+    display: flex;
+    .about-grp {
+      z-index: 5;
+      position: absolute;
+      top: 400px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      .about-box {
+        @include glass-bg;
+        overflow: hidden;
+        // flex: 0;
+        .side-box {
+          letter-spacing: 5px;
+          padding: 10px;
+          font-size: $base-font-size * 1.5;
+          background: $primary-color;
+          color: $bg-color;
+          font-weight: 500;
+          text-align: center;
+        }
+        .main-box {
+          color: $white-color;
+          padding: 10px;
+        }
+      }
+    }
   }
 }
 // ! SM DEVICES - DESIGN

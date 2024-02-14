@@ -109,12 +109,27 @@
               </div>
               <div class="box-3">
                 <div class="link-box content">
-                  <a href="#" class="fa-brands fa-whatsapp icon-link"></a>
-                  <a href="#" class="fa-brands fa-instagram icon-link"></a>
-                  <a href="#" class="fa-brands fa-linkedin icon-link"></a>
-                  <a href="#" class="fa-brands fa-codepen icon-link"></a>
+                  <a
+                    href="https://wa.me/+918300794078"
+                    class="fa-brands fa-whatsapp icon-link"
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/dhinesh.io/"
+                    class="fa-brands fa-instagram icon-link"
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/dhineshio/"
+                    class="fa-brands fa-linkedin icon-link"
+                  ></a>
+                  <a
+                    href="https://codepen.io/Dhinesh-Ramachandran/pens/"
+                    class="fa-brands fa-codepen icon-link"
+                  ></a>
                 </div>
-                <a href="#" class="btn btn-success download-btn content"
+                <a
+                  href="./assets/docs/Dhinesh_Resume.pdf"
+                  download
+                  class="btn btn-success download-btn content"
                   >Download CV</a
                 >
               </div>
@@ -167,35 +182,16 @@
           });
         </script>
         <script>
-          // // SCROLL TITLE ANIMATION TRIGGER
-          // window.addEventListener("scroll", function () {
-          //   var scrollPosition = window.scrollY;
-          //   var firstPageHeight =
-          //     document.querySelector(".header").offsetHeight;
-          //   var viewportHeight = window.innerHeight;
-          //   var secondPageThreshold = firstPageHeight;
-          //   if (scrollPosition >= secondPageThreshold) {
-          //     const spans = document.querySelectorAll(".title span");
-          //     spans.forEach((span, idx) => {
-          //       // Initial animation
-          //       setTimeout(() => {
-          //         span.classList.add("active");
-          //       }, 750 * (idx + 1));
-          //     });
-          //     window.removeEventListener("scroll", arguments.callee);
-          //   }
-          // });
+          // SCROLL TITLE ANIMATION TRIGGER
           window.addEventListener("scroll", function () {
             var scrollPosition = window.scrollY;
             var firstPageHeight =
               document.querySelector(".header").offsetHeight;
             var secondPageThreshold = firstPageHeight;
-
             // Check if the scroll position is beyond the threshold for the second page
             if (scrollPosition >= secondPageThreshold) {
               const spans = document.querySelectorAll(".title span");
               spans.forEach((span, idx) => {
-                // Check if the span is already animated
                 if (!span.classList.contains("active")) {
                   // Initial animation
                   setTimeout(() => {

@@ -1,0 +1,52 @@
+// NAV BAR UNDERLINE ANIMATION MEDIA QUERY
+@keyframes nav-underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes nav-left-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/*=============================================
+=            JAVA DEVELOPER ANIMATION            =
+=============================================*/
+@keyframes rotate-text-up {
+  0% {
+    transform: translate3d(0, 80px, 0);
+    opacity: 0;
+  }
+  20%,
+  80% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, -40px, 0);
+    opacity: 0;
+  }
+}
+@keyframes fade-text-in {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 80px, 0);
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/*=====  End of JAVA DEVELOPER ANIMATION  ======*/

@@ -145,7 +145,7 @@
         </header>
         <section class="about-section">
           <div class="title-box">
-            <div class="title">
+            <div class="title content">
               <span>A</span>
               <span>B</span>
               <span>O</span>
@@ -160,11 +160,52 @@
             <span class="wave"></span>
           </div>
         </section>
-
         <script>
           ScrollReveal().reveal(".content", {
             interval: 16,
             reset: true,
+          });
+        </script>
+        <script>
+          // // SCROLL TITLE ANIMATION TRIGGER
+          // window.addEventListener("scroll", function () {
+          //   var scrollPosition = window.scrollY;
+          //   var firstPageHeight =
+          //     document.querySelector(".header").offsetHeight;
+          //   var viewportHeight = window.innerHeight;
+          //   var secondPageThreshold = firstPageHeight;
+          //   if (scrollPosition >= secondPageThreshold) {
+          //     const spans = document.querySelectorAll(".title span");
+          //     spans.forEach((span, idx) => {
+          //       // Initial animation
+          //       setTimeout(() => {
+          //         span.classList.add("active");
+          //       }, 750 * (idx + 1));
+          //     });
+          //     window.removeEventListener("scroll", arguments.callee);
+          //   }
+          // });
+          window.addEventListener("scroll", function () {
+            var scrollPosition = window.scrollY;
+            var firstPageHeight =
+              document.querySelector(".header").offsetHeight;
+            var secondPageThreshold = firstPageHeight;
+
+            // Check if the scroll position is beyond the threshold for the second page
+            if (scrollPosition >= secondPageThreshold) {
+              const spans = document.querySelectorAll(".title span");
+              spans.forEach((span, idx) => {
+                // Check if the span is already animated
+                if (!span.classList.contains("active")) {
+                  // Initial animation
+                  setTimeout(() => {
+                    span.classList.add("active");
+                  }, 750 * (idx + 1));
+                }
+              });
+              // Remove the scroll event listener once the animation starts
+              window.removeEventListener("scroll", arguments.callee);
+            }
           });
         </script>
         <script src="./assets/js/script.js"></script>

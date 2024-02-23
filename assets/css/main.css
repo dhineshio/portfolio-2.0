@@ -12394,7 +12394,7 @@ a {
   width: 100%;
   position: relative;
   background: #1e2134;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
 }
@@ -12414,7 +12414,7 @@ a {
   flex-direction: column;
   cursor: pointer;
   transition: 0.5s height;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .about-section .about-grp .about-box.hidden {
   height: 45px;
@@ -12464,7 +12464,7 @@ a {
   height: 280px;
 }
 .about-section .about-grp .about-box-3 {
-  height: 600px;
+  height: 510px;
 }
 
 @media (min-width: 768px) {

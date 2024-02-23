@@ -12409,7 +12409,6 @@ a {
   -webkit-backdrop-filter: blur(5px);
   margin: auto;
   width: 80%;
-  height: 500px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -12463,10 +12462,6 @@ a {
 .about-section .about-grp .about-box-2 {
   height: 280px;
 }
-.about-section .about-grp .about-box-3 {
-  height: 370px;
-}
-
 @media (min-width: 768px) {
   .header {
     height: 85vh;

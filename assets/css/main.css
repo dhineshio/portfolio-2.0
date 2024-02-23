@@ -11857,6 +11857,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* GLASS BACKGROUND */
 .bg-container {
   width: 100%;
   height: 100vh;
@@ -11936,16 +11937,21 @@ textarea.form-control-lg {
   }
 }
 .wave {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(95, 186, 117, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 1000% 1000% 0 0;
   position: absolute;
   width: 200%;
-  height: 10em;
+  height: 5em;
   animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
   bottom: 0;
   left: 0;
+  bottom: 0;
   z-index: 1;
 }
 .wave:nth-of-type(2) {
@@ -12193,7 +12199,7 @@ textarea.form-control-lg {
 .title-box {
   width: fit-content;
   position: absolute;
-  top: 100px;
+  top: 200px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -12399,7 +12405,8 @@ a {
   justify-content: center;
 }
 .about-section .about-grp {
-  margin: 150px 0px 0px 0px;
+  margin: 250px 0px 0px 0px;
+  z-index: 2;
 }
 .about-section .about-grp .about-box {
   background: rgba(255, 255, 255, 0.26);
@@ -12428,6 +12435,7 @@ a {
   font-size: 30px;
 }
 .about-section .about-grp .about-box .main-box {
+  overflow: hidden;
   color: white;
   padding: 10px;
 }
@@ -12462,6 +12470,7 @@ a {
 .about-section .about-grp .about-box-2 {
   height: 280px;
 }
+
 @media (min-width: 768px) {
   .header {
     height: 85vh;

@@ -134,12 +134,12 @@ a {
     justify-content: center;
 
     .about-grp {
-      margin: 150px 0px 0px 0px;
+      margin: 250px 0px 0px 0px;
+      z-index: 2;
       .about-box {
         @include glass-bg;
         margin: auto;
         width: 80%;
-        // height: 500px;
         display: flex;
         flex-direction: column;
         cursor: pointer;
@@ -159,6 +159,7 @@ a {
           font-size: 30px;
         }
         .main-box {
+          overflow: hidden;
           div {
             border: 2px solid $primary-color;
             margin-bottom: 10px;
@@ -193,9 +194,6 @@ a {
       }
       .about-box-2 {
         height: 280px;
-      }
-      .about-box-3 {
-        // height: 370px;
       }
     }
   }

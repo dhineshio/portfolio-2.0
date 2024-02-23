@@ -29,9 +29,10 @@
   width: fit-content;
   position: absolute;
   // top: 20%;
-  top: 150px;
+  top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
+  // z-index: 1;
   .title {
     font-size: $base-font-size * 1.6;
     color: white;

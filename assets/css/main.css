@@ -12193,7 +12193,7 @@ textarea.form-control-lg {
 .title-box {
   width: fit-content;
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -12390,21 +12390,16 @@ a {
 }
 
 .about-section {
-  overflow: hidden;
   height: 100vh;
-  background: #1e2134;
+  width: 100%;
   position: relative;
+  background: #1e2134;
+  overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 .about-section .about-grp {
-  z-index: 5;
-  position: absolute;
-  top: 400px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
-  display: flex;
-  flex-direction: column;
+  margin: 150px 0px 0px 0px;
 }
 .about-section .about-grp .about-box {
   background: rgba(255, 255, 255, 0.26);
@@ -12412,20 +12407,64 @@ a {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  margin: auto;
+  width: 80%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.5s height;
   overflow: hidden;
 }
+.about-section .about-grp .about-box.hidden {
+  height: 45px;
+}
 .about-section .about-grp .about-box .side-box {
-  letter-spacing: 5px;
-  padding: 10px;
-  font-size: 24px;
-  background: #5fba75;
+  height: 45px;
   color: #1e2134;
-  font-weight: 500;
-  text-align: center;
+  background: #5fba75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
 .about-section .about-grp .about-box .main-box {
-  color: #fff;
+  color: white;
   padding: 10px;
+}
+.about-section .about-grp .about-box .main-box div {
+  border: 2px solid #5fba75;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.about-section .about-grp .about-box .main-box .text-1 {
+  font-size: 19.2px;
+  font-weight: 500;
+}
+.about-section .about-grp .about-box .main-box .text-2 {
+  font-size: 14px;
+  font-weight: 100;
+}
+.about-section .about-grp .about-box .main-box .text-3 {
+  font-size: 10px;
+}
+.about-section .about-grp .about-box .main-box .text-4 {
+  background: gray;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid #5fba75;
+  text-align: center;
+}
+.about-section .about-grp .about-box-1 {
+  height: 200px;
+}
+.about-section .about-grp .about-box-2 {
+  height: 280px;
+}
+.about-section .about-grp .about-box-3 {
+  height: 600px;
 }
 
 @media (min-width: 768px) {

@@ -25,7 +25,6 @@ a {
     color: $white-color;
     min-height: 100vh;
     margin: auto;
-    // border-bottom: 1px solid $white-color;
     position: relative;
     .header-box {
       margin: auto;
@@ -126,37 +125,79 @@ a {
     }
   }
   .about-section {
-    overflow: hidden;
     height: 100vh;
-    background: $bg-color;
+    width: 100%;
     position: relative;
+    background: $bg-color;
+    overflow: hidden;
+
     display: flex;
+    justify-content: center;
+
     .about-grp {
-      z-index: 5;
-      position: absolute;
-      top: 400px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 320px;
-      display: flex;
-      flex-direction: column;
+      margin: 150px 0px 0px 0px;
       .about-box {
         @include glass-bg;
+        margin: auto;
+        width: 80%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        // margin-right: 10px;
+        cursor: pointer;
+        transition: 0.5s height;
         overflow: hidden;
-        // flex: 0;
+
+        &.hidden {
+          height: 45px;
+        }
         .side-box {
-          letter-spacing: 5px;
-          padding: 10px;
-          font-size: $base-font-size * 1.5;
-          background: $primary-color;
+          height: 45px;
           color: $bg-color;
-          font-weight: 500;
-          text-align: center;
+          background: $primary-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 30px;
         }
         .main-box {
-          color: $white-color;
+          div {
+            border: 2px solid $primary-color;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 20px;
+          }
+          color: white;
           padding: 10px;
+          .text-1 {
+            font-size: $base-font-size * 1.2;
+            font-weight: 500;
+          }
+          .text-2 {
+            font-size: 14px;
+            font-weight: 100;
+          }
+          .text-3 {
+            font-size: 10px;
+          }
+          .text-4 {
+            background: gray;
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 20px;
+            border: 1px solid $primary-color;
+            text-align: center;
+          }
         }
+      }
+      .about-box-1 {
+        height: 200px;
+      }
+      .about-box-2 {
+        height: 280px;
+      }
+      .about-box-3 {
+        height: 600px;
       }
     }
   }

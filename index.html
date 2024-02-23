@@ -176,8 +176,8 @@
             <div class="about-box about-box-1">
               <div class="side-box">Summary</div>
               <div class="main-box">
-                <h2>Hello, I'm <span>Dhinesh!</span></h2>
-                <p>
+                <p class="text-1">Hello, I'm <span>Dhinesh!</span></p>
+                <p class="text-2">
                   I am a passionate Java developer dedicated to crafting robust,
                   scalable, and maintainable software solutions. With a keen eye
                   for detail and a strong foundation in software engineering
@@ -186,11 +186,49 @@
                 </p>
               </div>
             </div>
-            <div class="about-box about-box-1">
-              <div class="side-box">Journey</div>
+            <div class="about-box about-box-2 hidden">
+              <div class="side-box">Certification</div>
+              <div class="main-box">
+                <div>
+                  <p class="text-1">Full Stack Web Development</p>
+                  <p class="text-2">UNIQ Technology | Chennai</p>
+                  <p class="text-3">Sep 2023 - Jan 2024</p>
+                </div>
+                <div>
+                  <p class="text-1">
+                    Java Spring Framework 6 with Spring Boot 3
+                  </p>
+                  <p class="text-2">Udemy "Naveen Reddy" | Remote</p>
+                  <p class="text-3">Sep 2023 - Jan 2024</p>
+                </div>
+              </div>
             </div>
-            <div class="about-box about-box-1">
-              <div class="side-box">Expertise</div>
+            <div class="about-box about-box-3 hidden">
+              <div class="side-box">Education</div>
+              <div class="main-box">
+                <div>
+                  <p class="text-1">Master of Computer Application</p>
+                  <p class="text-2">P R Engineering College | Thanjavur</p>
+                  <p class="text-3">Jul 2023 - Sep 2021</p>
+                  <p class="text-4">Cumulative GPA : 8.2 / 10</p>
+                </div>
+                <div>
+                  <p class="text-1">Bachelor of Computer Application</p>
+                  <p class="text-2">
+                    Ponnaiyah Institute of Science and Technology | Thanjavur
+                  </p>
+                  <p class="text-3">Jul 2018 - May 2021</p>
+                  <p class="text-4">Cumulative GPA : 8.0 / 10</p>
+                </div>
+                <div>
+                  <p class="text-1">Higher Secondary Certificate Board</p>
+                  <p class="text-2">
+                    Veera Raghava Higher Secondary School | Thanjavur
+                  </p>
+                  <p class="text-3">Jun 2017 - Mar 2018</p>
+                  <p class="text-4">Percentage : 60.5 / 100</p>
+                </div>
+              </div>
             </div>
           </div>
           <div>
@@ -199,10 +237,46 @@
             <span class="wave"></span>
           </div>
         </section>
+
         <script>
           ScrollReveal().reveal(".content", {
             interval: 16,
             reset: true,
+          });
+        </script>
+        <script>
+          const boxes = document.querySelectorAll(".box");
+
+          boxes.forEach((box) => {
+            box.addEventListener("mouseenter", () => {
+              boxes.forEach((b) => {
+                if (b !== box) {
+                  b.classList.add("shrink");
+                }
+              });
+            });
+
+            box.addEventListener("mouseleave", () => {
+              boxes.forEach((b) => {
+                b.classList.remove("shrink");
+              });
+            });
+          });
+        </script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            let boxes = document.querySelectorAll(".about-box");
+
+            boxes.forEach(function (box) {
+              box.addEventListener("mouseover", function () {
+                // Hide all boxes
+                boxes.forEach(function (b) {
+                  b.classList.add("hidden");
+                });
+                // Show the hovered box
+                box.classList.remove("hidden");
+              });
+            });
           });
         </script>
         <script src="./assets/js/script.js"></script>

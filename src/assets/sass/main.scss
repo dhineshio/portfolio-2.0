@@ -123,12 +123,6 @@ a {
       }
     }
   }
-  .about-section {
-    overflow: hidden;
-    height: 100vh;
-    background: $bg-color;
-    position: relative;
-  }
 }
 // ! SM DEVICES - DESIGN
 @include media-breakpoint-up(sm) {
@@ -169,6 +163,10 @@ a {
         align-items: center;
       }
     }
+  }
+  .about-section {
+    height: 100vh;
+    background: red;
   }
 }
 // ! LG DEVICES - DESIGN

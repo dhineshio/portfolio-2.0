@@ -135,7 +135,7 @@ a {
 
     .about-grp {
       margin: 250px 0px 0px 0px;
-      z-index: 2;
+      z-index: 5;
       .about-box {
         @include glass-bg;
         margin: auto;
@@ -143,8 +143,8 @@ a {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        transition: 0.5s height;
-        overflow-x: hidden;
+        transition: 0.3s height;
+        overflow: hidden;
 
         &.hidden {
           height: 45px;
@@ -157,6 +157,7 @@ a {
           align-items: center;
           justify-content: center;
           font-size: 30px;
+          user-select: none;
         }
         .main-box {
           overflow: hidden;
@@ -190,7 +191,7 @@ a {
         }
       }
       .about-box-1 {
-        height: 200px;
+        height: 250px;
       }
       .about-box-2 {
         height: 280px;

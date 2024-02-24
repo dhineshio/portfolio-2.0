@@ -86,10 +86,9 @@
   animation: wave 10s -3s linear infinite;
   transform: translate3d(0, 0, 0);
   opacity: 0.8;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
-  bottom: 0;
-  z-index: 1;
+  z-index: -1;
   &:nth-of-type(2) {
     bottom: -1.25em;
     animation: wave 18s linear reverse infinite;
